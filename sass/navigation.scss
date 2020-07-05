@@ -1,0 +1,17 @@
+.site-branding {
+    img {
+        max-width: 75px;
+        height: auto;
+    }
+}
+
+#site-navigation {
+    ul {
+        list-style-type: none;
+        display: flex;
+        li {
+            margin: 0 2rem;
+        }
+    }
+    justify-content: flex-end;
+}

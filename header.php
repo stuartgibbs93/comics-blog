@@ -28,50 +28,35 @@
 
 	<header id="masthead" class="container-fluid site-header">
 		<div id="top-bar" class="row">
-			<div>
-				<p>Example Top Row Text</p>
+			<div class="mx-auto">
+				<p class="text-center">Example Top Row Text</p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="site-branding">
+			<div class="site-branding col-4">
 				<?php
 				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php
-				else :
-					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
-				$comics_blog_description = get_bloginfo( 'description', 'display' );
-				if ( $comics_blog_description || is_customize_preview() ) :
-					?>
-					<p class="site-description"><?php echo $comics_blog_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-				<?php endif; ?>
-			</div><!-- .site-branding -->
-		</div>
-
-		<div class="col-6 d-sm-block d-lg-none ">
-				<button class="navbar-toggler navbar-light my-4 float-right" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-		</div>
-
-		
-
-		<nav id="site-navigation" class="main-navigation navbar col-lg-8 col-md-12 col-sm-12 col-6">
-			<div id="navbarToggleExternalContent" class="collapse d-lg-block">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'depth' => 2,
-					'menu_class' => 'nav',
-					
-				) );
 				?>
+			</div><!-- .site-branding -->
+
+			<div class="col-8 d-sm-block d-lg-none ">
+					<button class="navbar-toggler navbar-light my-4 float-right" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 			</div>
-		</nav><!-- #site-navigation -->
+
+			<nav id="site-navigation" class="main-navigation navbar navbar-nav col-8">
+				<div id="navbarToggleExternalContent" class="collapse d-lg-block">
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'depth' => 2,
+						'menu_class' => 'nav',
+						
+					) );
+					?>
+				</div>
+			</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->
