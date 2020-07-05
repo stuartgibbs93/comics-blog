@@ -16,44 +16,62 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'comics-blog' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$comics_blog_description = get_bloginfo( 'description', 'display' );
-			if ( $comics_blog_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $comics_blog_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'comics-blog' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
+	<header id="masthead" class="container-fluid site-header">
+		<div id="top-bar" class="row">
+			<div>
+				<p>Example Top Row Text</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="site-branding">
+				<?php
+				the_custom_logo();
+				if ( is_front_page() && is_home() ) :
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				else :
+					?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+				endif;
+				$comics_blog_description = get_bloginfo( 'description', 'display' );
+				if ( $comics_blog_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $comics_blog_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<?php endif; ?>
+			</div><!-- .site-branding -->
+		</div>
+
+		<div class="col-6 d-sm-block d-lg-none ">
+				<button class="navbar-toggler navbar-light my-4 float-right" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+		</div>
+
+		
+
+		<nav id="site-navigation" class="main-navigation navbar col-lg-8 col-md-12 col-sm-12 col-6">
+			<div id="navbarToggleExternalContent" class="collapse d-lg-block">
+				<?php
+				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
+					'depth' => 2,
+					'menu_class' => 'nav',
+					
+				) );
+				?>
+			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
