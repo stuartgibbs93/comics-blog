@@ -33,11 +33,6 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="site-branding col-4">
-				<?php
-				the_custom_logo();
-				?>
-			</div><!-- .site-branding -->
 
 			<div class="col-8 d-sm-block d-lg-none ">
 					<button class="navbar-toggler navbar-light my-4 float-right" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +40,7 @@
 					</button>
 			</div>
 
-			<nav id="site-navigation" class="main-navigation navbar navbar-nav col-8">
+			<nav id="site-navigation" class="main-navigation navbar navbar-nav col-12">
 				<div id="navbarToggleExternalContent" class="collapse d-lg-block">
 					<?php
 					wp_nav_menu( array(
