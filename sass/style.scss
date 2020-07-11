@@ -1,2 +1,7 @@
-@import 'homepage.scss';
-@import 'navigation.scss';
+@import '_homepage';
+@import '_navigation';
+@import '_ui';
+@import '_page';
+
+//Custom Variables
+@import '_variables';

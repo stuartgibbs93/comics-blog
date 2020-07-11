@@ -29,10 +29,10 @@
 	<header id="masthead" class="container-fluid site-header">
 		<div id="top-bar" class="row">
 			<div class="mx-auto">
-				<p class="text-center">Example Top Row Text</p>
+				<!-- <p class="text-center">Site Announcment</p> -->
 			</div>
 		</div>
-		<div class="row">
+		<div class="row pt-3">
 
 			<div class="col-8 d-sm-block d-lg-none ">
 					<button class="navbar-toggler navbar-light my-4 float-right" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">

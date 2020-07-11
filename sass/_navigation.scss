@@ -1,0 +1,20 @@
+#masthead {
+    background-color:#E62429;;
+    .site-branding {
+        img {
+            max-width: 150px;
+            height: auto;
+        }
+    }
+    
+    #site-navigation {
+        ul {
+            list-style-type: none;
+            display: flex;
+            li {
+                margin: 0 6rem;
+            }
+        }
+        
+    }
+}
