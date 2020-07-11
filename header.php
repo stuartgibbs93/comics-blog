@@ -34,7 +34,7 @@
 		</div>
 		<div class="row pt-3">
 
-			<div class="col-8 d-sm-block d-lg-none ">
+			<div class="col-12 d-sm-block d-lg-none ">
 					<button class="navbar-toggler navbar-light my-4 float-right" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>

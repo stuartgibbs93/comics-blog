@@ -2,4 +2,10 @@
     background-color: #E62429;
     background-size: cover;
     height: 100vh;
+    .site-branding {
+        padding-left: 1.5rem;
+        // @include media-breakpoint-down(lg) {
+        //     padding-left:0;
+        // }
+    }
 }
