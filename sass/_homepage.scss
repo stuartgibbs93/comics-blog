@@ -2,10 +2,34 @@
     background-color: #E62429;
     background-size: cover;
     height: 100vh;
+    margin-bottom: 0;
     .site-branding {
-        padding-left: 1.5rem;
+        padding-left: 2.5rem;
         // @include media-breakpoint-down(lg) {
         //     padding-left:0;
         // }
     }
+}
+
+#about{
+    min-height:100vh
+}
+#comics-background{
+    background-image: url('http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/marvel_banner_1-scaled.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:300px;
+}
+#reading-orders{
+    background-color:#747481;
+    min-height: 100vh;
+}
+#recommendations{
+    background-color:#ffffff;
+    min-height: 100vh;
+}
+#collection{
+    background-color:#747481;
+    min-height: 100vh;
 }
