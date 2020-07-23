@@ -29,12 +29,33 @@ get_header();
                 </div>
             </div>
             <div class="container-fluid d-flex flex-column align-items-center justify-content-center" id="reading-orders">
-                <div class="row">
-                    <div class="col-12 py-4 px-5 mt-5">
-                    <h2 class="text-center">Reading Orders</h2>
-                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi eros, volutpat in mi id, interdum pellentesque odio. Praesent ut sollicitudin augue. Sed vitae lacus mi. Sed semper metus at lacus malesuada faucibus. Phasellus fermentum consequat euismod. In ut elit dui. Phasellus ac vehicula mi, vel sollicitudin ex. Phasellus egestas blandit nulla id efficitur. Praesent vehicula euismod est in elementum. Donec posuere neque faucibus quam congue eleifend vel non dolor. Integer sit amet orci et eros tristique maximus. Suspendisse potenti.</p>
+                 <div class="row d-flex justify-content-center">
+                 <div class="card post col-md-3 col-12 p-0 mx-4 my-5">
+                        <img class="card-img-top" src="http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/marvel_banner_1-scaled.jpeg" alt="">
+                        <div class="card-body">
+                            <h3 class="text-left card-title">Reading Orders</h3>
+                            <p class="text-left card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi eros, volutpat in mi id, interdum pellentesque odio. Praesent ut sollicitudin augue. Sed vitae lacus mi. Sed semper metus at lacus malesuada faucibus. Phasellus fermentum consequat euismod&hellip; </p>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="card post col-md-3 col-12 p-0 mx-4 my-5">
+                        <img class="card-img-top" src="http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/marvel_banner_1-scaled.jpeg" alt="">
+                        <div class="card-body">
+                            <h3 class="text-left card-title">Reading Orders</h3>
+                            <p class="text-left card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi eros, volutpat in mi id, interdum pellentesque odio. Praesent ut sollicitudin augue. Sed vitae lacus mi. Sed semper metus at lacus malesuada faucibus. Phasellus fermentum consequat euismod&hellip; </p>
+                        </div>
+                    </div>
+
+                    <div class="card post col-md-3 col-12 p-0 mx-4 my-5">
+                        <img class="card-img-top" src="http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/marvel_banner_1-scaled.jpeg" alt="">
+                        <div class="card-body">
+                            <h3 class="text-left card-title">Reading Orders</h3>
+                            <p class="text-left card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi eros, volutpat in mi id, interdum pellentesque odio. Praesent ut sollicitudin augue. Sed vitae lacus mi. Sed semper metus at lacus malesuada faucibus. Phasellus fermentum consequat euismod&hellip; </p>
+                        </div>
+                    </div>
+                </div> 
+
+                
             </div>
            
             <div class="container-fluid d-flex flex-column align-items-center justify-content-center" id="recommendations">
