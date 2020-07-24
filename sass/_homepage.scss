@@ -29,6 +29,19 @@
         //     font-size: 0.9rem;
         // }
         border: none;
+        .post-image {
+            img {
+                width: 100%;
+                border-top-left-radius: calc(.25rem - 1px);
+                border-top-right-radius: calc(.25rem - 1px);
+                height:auto;
+            }
+        }
+        .post-title {
+            a {
+                color: inherit;
+            }
+        }
     }
 }
 #recommendations{
