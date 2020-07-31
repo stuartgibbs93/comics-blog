@@ -1,5 +1,5 @@
 .jumbotron {
-    background-color: #E62429;
+    background: linear-gradient(to bottom right, #6E0C10 0%, #E62429 100%);
     background-size: cover;
     height: 100vh;
     margin-bottom: 0;
@@ -9,6 +9,7 @@
         //     padding-left:0;
         // }
     }
+    
 }
 
 #about{
@@ -21,7 +22,7 @@
     background-size: cover;
     min-height:300px;
 }
-#reading-orders{
+#reading-orders, #collection{
     background-color:#747481;
     min-height: 100vh;
     .post {
@@ -47,8 +48,27 @@
 #recommendations{
     background-color:#ffffff;
     min-height: 100vh;
+    .post {
+        // p {
+        //     font-size: 0.9rem;
+        // }
+        //border: none;
+        .post-image {
+            img {
+                width: 100%;
+                border-top-left-radius: calc(.25rem - 1px);
+                border-top-right-radius: calc(.25rem - 1px);
+                height:auto;
+            }
+        }
+        .post-title {
+            a {
+                color: inherit;
+            }
+        }
+    }
 }
-#collection{
-    background-color:#747481;
-    min-height: 100vh;
-}
+// #collection{
+//     background-color:#747481;
+//     min-height: 100vh;
+// }
