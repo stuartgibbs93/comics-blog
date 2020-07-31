@@ -24,34 +24,3 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-
-
-	<header id="masthead" class="container-fluid site-header">
-		<div id="top-bar" class="row">
-			<div class="mx-auto">
-				<!-- <p class="text-center">Site Announcment</p> -->
-			</div>
-		</div>
-		<div class="row pt-3">
-
-			<div class="col-12 d-sm-block d-lg-none ">
-					<button class="navbar-toggler navbar-light my-4 float-right" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-			</div>
-
-			<nav id="site-navigation" class="main-navigation navbar navbar-nav col-12">
-				<div id="navbarToggleExternalContent" class="collapse d-lg-block">
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-						'depth' => 2,
-						'menu_class' => 'nav',
-						
-					) );
-					?>
-				</div>
-			</nav><!-- #site-navigation -->
-		</div>
-	</header><!-- #masthead -->

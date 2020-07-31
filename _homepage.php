@@ -8,15 +8,42 @@ get_header();
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
             <div class="jumbotron jumbotron-fluid">
+                <div class="overlay">
+                    <div id="top-bar" class="row">
+                        <div class="mx-auto">
+                            <!-- <p class="text-center">Site Announcment</p> -->
+                        </div>
+                    </div>
+                    <div class="row pt-3 container-fluid site-header mx-auto" id="masthead">
+                        <div class="col-12 d-sm-block d-lg-none ">
+                            <button class="navbar-toggler navbar-light my-4 float-right" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
 
+                        <nav id="site-navigation" class="main-navigation navbar navbar-nav col-12">
+                            <div id="navbarToggleExternalContent" class="collapse d-lg-block">
+                                <?php
+                                wp_nav_menu( array(
+                                    'theme_location' => 'menu-1',
+                                    'menu_id'        => 'primary-menu',
+                                    'depth' => 2,
+                                    'menu_class' => 'nav',
+                                    
+                                ) );
+                                ?>
+                            </div>
+                        </nav><!-- #site-navigation -->
+                    </div>
+                
+                    <div class="container-fluid">
+                        <!-- <h1 class="display-4"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></h1> -->
+                            <div class="site-branding mx-auto text-center col-4 mt-5">
+                                <img src="http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/placeholder_logo.png">
+                            </div><!-- .site-branding -->
+                            <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+                    </div>
 
-            
-                <div class="container-fluid">
-                    <!-- <h1 class="display-4"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></h1> -->
-                        <div class="site-branding mx-auto text-center col-4 mt-5">
-				            <img src="http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/placeholder_logo.png">
-			            </div><!-- .site-branding -->
-                        <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
                 </div>
             </div>
             <div class="container-fluid">

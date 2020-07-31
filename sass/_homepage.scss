@@ -1,15 +1,21 @@
 .jumbotron {
-    background: linear-gradient(to bottom right, #6E0C10 0%, #E62429 100%);
+    background: radial-gradient(#E62429,#6E0C10);;
     background-size: cover;
+    background-image: url('http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/marvel_banner_1-scaled.jpeg');
     height: 100vh;
+    margin-top: 0;
     margin-bottom: 0;
+    padding-top:0;
     .site-branding {
-        padding-left: 2.5rem;
+        //padding-left: 2.5rem;
         // @include media-breakpoint-down(lg) {
         //     padding-left:0;
         // }
     }
-    
+    .overlay {
+        background-color: rgba(230,36,41,0.5);
+        height:100vh;
+    }
 }
 
 #about{
@@ -23,7 +29,7 @@
     min-height:300px;
 }
 #reading-orders, #collection{
-    background-color:#747481;
+    background-color:#d6d6d6;
     min-height: 100vh;
     .post {
         // p {
