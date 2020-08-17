@@ -58,67 +58,141 @@ get_header();
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="container-fluid d-flex flex-column align-items-center justify-content-center" id="reading-orders">
                  <div class="row my-5">
                     <h2>Reading Orders</h2>
                  </div>
-                 <div class="row mb-5 d-flex justify-content-center">
+                 <div class="row carousel mb-5 d-flex justify-content-center">
 
                  <!--Define our WP Query Parameters-->
                     <?php $the_query = new WP_Query( array( 'category_name' => 'reading-orders' )); ?>
                             
                     <!-- Start our WP Query -->
                         <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-                            
-                            <div class="card post col-md-3 col-12 p-0 mx-4 my-3">
-                                
-                                <div class="post-image">
-                                    <?php $cardImg = the_post_thumbnail(); ?>
-                                    <?php if ($cardImg == "") {
-                                        $cardImg[0] = "http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/marvel_banner_1-scaled.jpeg"; } ?>
+                            <div class="carousel-cell">
+                                <div class="card post col-md-3 col-12 p-0 mx-4 my-3">
                                     
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="text-left card-title post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-                                    <p><?php the_excerpt(__('(more…)')); ?></p>
-                                </div>
-                            </div> 
+                                    <div class="post-image">
+                                        <?php $cardImg = the_post_thumbnail(); ?>
+                                        <?php if ($cardImg == "") {
+                                            $cardImg[0] = "http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/marvel_banner_1-scaled.jpeg"; } ?>
+                                        
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="text-left card-title post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                                        <p><?php the_excerpt(__('(more…)')); ?></p>
+                                    </div>
+                                </div> 
+                            </div>
 
                         <!-- Repeat the process and reset once it hits the limit -->
                         <?php endwhile; wp_reset_postdata(); ?>
                 </div>
 
-
-
-
-
-
-
-
-
-
-                    
-
-                   <!-- <div class="card post col-md-3 col-12 p-0 mx-4 my-5">
-                        <img class="card-img-top" src="http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/marvel_banner_1-scaled.jpeg" alt="">
-                        <div class="card-body">
-                            <h3 class="text-left card-title">Reading Orders</h3>
-                            <p class="text-left card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi eros, volutpat in mi id, interdum pellentesque odio. Praesent ut sollicitudin augue. Sed vitae lacus mi. Sed semper metus at lacus malesuada faucibus. Phasellus fermentum consequat euismod&hellip; </p>
-                        </div>
-                    </div>
-
-                    <div class="card post col-md-3 col-12 p-0 mx-4 my-5">
-                        <img class="card-img-top" src="http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/marvel_banner_1-scaled.jpeg" alt="">
-                        <div class="card-body">
-                            <h3 class="text-left card-title">Reading Orders</h3>
-                            <p class="text-left card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi eros, volutpat in mi id, interdum pellentesque odio. Praesent ut sollicitudin augue. Sed vitae lacus mi. Sed semper metus at lacus malesuada faucibus. Phasellus fermentum consequat euismod&hellip; </p>
-                        </div>
-                    </div>
-                </div>  -->
-
-                
             </div>
            
+
+
+
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="main-carousel">
+                <div class="carousel-cell">...</div>
+                <div class="carousel-cell">...</div>
+                <div class="carousel-cell">...</div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="container-fluid d-flex flex-column align-items-center justify-content-center" id="recommendations">
             <div class="row my-5">
                     <h2>Recommendations</h2>
