@@ -45,7 +45,7 @@ function reloadCSS() {
 }
 //sets gulp watch task
 function watchFiles() {
-    livereload.listen(23456);
+    livereload.listen(35729);
     phpWatch()
     watch('./sass/*.scss', { delay: 500 }, compileSass)
     watch('./css/style.min.css', reloadCSS)
