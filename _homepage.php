@@ -110,7 +110,7 @@ get_header();
 
 
 
-            <div class="row py-5 d-flex justify-content-center" id="reading-orders-title">
+            <div class="container-fluid d-flex flex-column align-items-center justify-content-center py-5" id="reading-orders-title">
                 <h2>Reading Orders</h2>
             </div>
 
@@ -211,11 +211,36 @@ get_header();
                         <?php endwhile; wp_reset_postdata(); ?>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="container-fluid d-flex flex-column align-items-center justify-content-center" id="collection">
             <div class="row my-5">
                     <h2>Collection</h2>
                  </div>
-                 <div class="row mb-5 d-flex justify-content-center">
+                 <div class="row mb-5 d-flex justify-content-center" id="cardRow">
 
                  <!--Define our WP Query Parameters-->
                     <?php $the_query = new WP_Query( array( 'category_name' => 'collection' )); ?>
@@ -223,14 +248,14 @@ get_header();
                     <!-- Start our WP Query -->
                         <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
                             
-                            <div class="card post col-md-3 col-12 p-0 mx-4 my-3">
+                            <div class="card post col-md-4 col-12">
                                 
-                                <div class="post-image">
+                                <!-- <div class="post-image">
                                     <?php $cardImg = the_post_thumbnail(); ?>
                                     <?php if ($cardImg == "") {
                                         $cardImg[0] = "http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/07/marvel_banner_1-scaled.jpeg"; } ?>
                                     
-                                </div>
+                                </div> -->
                                 <div class="card-body">
                                     <h3 class="text-left card-title post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
                                     <p><?php the_excerpt(__('(more…)')); ?></p>
@@ -243,6 +268,28 @@ get_header();
             </div>
 
                     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </main><!-- #main -->
     </div>

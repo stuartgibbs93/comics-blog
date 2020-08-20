@@ -146,7 +146,7 @@ function comics_blog_scripts() {
 	wp_enqueue_style( 'comics-blog-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'comics-blog-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'comics-blog-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'comics-blog-scripts', get_template_directory_uri() . '/js/scripts.min.js', array(), false, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
