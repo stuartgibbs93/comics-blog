@@ -110,36 +110,76 @@ get_header();
 
 
 
-            <div class="container-fluid d-flex flex-column align-items-center justify-content-center py-5" id="reading-orders-title">
-                <h2>Reading Orders</h2>
-            </div>
+            <!-- <div class="container-fluid d-flex flex-column align-items-center justify-content-center py-5" id="reading-orders-title">
+                
+            </div> -->
 
-            <!-- Flickity HTML init -->
-            <div class="carousel" data-flickity='{ "wrapAround": true }'  id="reading-orders">
+           <div class="container-fluid py-5" id="reading-orders">
+                <h2 class="text-center mb-5">Reading Orders</h2>
+                <!-- Flickity HTML init -->
+                <div class="carousel" data-flickity='{ "wrapAround": true, "freeScroll": true, "pageDots": false  }'>
 
-                <!--Define our WP Query Parameters-->
-                <?php $the_query = new WP_Query( array( 'category_name' => 'reading-orders' )); ?>
-                                
-                <!-- Start our WP Query -->
-                <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-                    <div class="carousel-cell">
-                        <div class="card post">
-                            <div class="post-image">
-                                <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('medium', array('class' => 'img-fluid d-block mx-auto')); ?></a>   
-                            </div>
-                            <div class="card-body">
-                                <h3 class="text-left card-title post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-                                <!--<p><?php the_excerpt(__('(more…)')); ?></p>-->
+                    <!--Define our WP Query Parameters-->
+                    <?php $the_query = new WP_Query( array( 'category_name' => 'reading-orders' )); ?>
+                                    
+                    <!-- Start our WP Query -->
+                    <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+                        <div class="carousel-cell">
+                            <div class=" post">
+                                <div class="post-image">
+                                    <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('medium', array('class' => 'img-fluid d-block mx-auto')); ?></a>   
+                                    <!-- <h3 class="text-center card-title post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3> -->
+                                </div>
+                                <div class="carousel-caption">
+                                    <h3 class="text-center card-title post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                                    <!-- <p><?php the_excerpt(__('(more…)')); ?></p> -->
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <!-- Repeat the process and reset once it hits the limit -->
-                <?php endwhile; wp_reset_postdata(); ?>
+                    <!-- Repeat the process and reset once it hits the limit -->
+                    <?php endwhile; wp_reset_postdata(); ?>
+                </div>
+           </div>
+
+
+
+
+
+           
+
+
+            <div class="scene">
+                <div class="carousel-spin">
+                    <!--Define our WP Query Parameters-->
+                    <?php $the_query = new WP_Query( array( 'category_name' => 'reading-orders' )); ?>
+                                    
+                    <!-- Start our WP Query -->
+                    <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+                        <div class="carousel__cell">
+                            <div class=" post">
+                                <div class="post-image">
+                                    <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('medium', array('class' => 'img-fluid d-block mx-auto')); ?></a>   
+                                    <!-- <h3 class="text-center card-title post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3> -->
+                                </div>
+                                <div class="carousel-caption">
+                                    <h3 class="text-center card-title post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                                    <!-- <p><?php the_excerpt(__('(more…)')); ?></p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Repeat the process and reset once it hits the limit -->
+                    <?php endwhile; wp_reset_postdata(); ?>
+                                    
+           
+                    
+                </div>
             </div>
+            <p class="text-center my-5">
+                <button class="previous-button">Previous</button>
+                <button class="next-button">Next</button>
+            </p>
 
-
-
-
+            
 
 
 
@@ -184,7 +224,7 @@ get_header();
             <div class="container-fluid d-flex flex-column align-items-center justify-content-center" id="recommendations">
             <div class="row my-5">
                     <h2>Recommendations</h2>
-                 </div>
+                </div>
                  <div class="row mb-5 d-flex justify-content-center">
 
                  <!--Define our WP Query Parameters-->

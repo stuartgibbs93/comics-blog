@@ -19,7 +19,7 @@ function compileSass() {
 }
 //minifies single .js file & reloads
 function compileJs() {
-    return src(['/scripts/**/*.js', '!/scripts/src/scripts.min.js'])
+    return src(['./js/src/*.js'])
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['@babel/env']

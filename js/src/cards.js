@@ -2,7 +2,7 @@ $(document).ready(function() {
     var cardRowWidth,
         cardRowHeight,
         resizeTimeout
-    $('#cardRow').parent().parent().removeClass('pr-0')
+    //$('#cardRow').parent().parent().removeClass('pr-0')
 
     function findStartingAttr() {
         // get parent row height and width
