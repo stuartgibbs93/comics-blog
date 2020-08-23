@@ -42,7 +42,7 @@
    .carousel {
         height:100%;
         width:100%;
-        position: absolute;
+        //position: absolute;
         // transform-style: preserve-3d;
         // transform: translateZ(-288px);
         
@@ -218,12 +218,26 @@
 // .carousel__cell:nth-child(9n+8) { background: url("http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/08/captain_marvel_20-200x300.jpg"); }
 // .carousel__cell:nth-child(9n+0) { background: url("http://localhost:8888/marvelcomicsfandom/wp-content/uploads/2020/08/captain_marvel_20-200x300.jpg"); }
 
-.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
-.carousel__cell:nth-child(2) { transform: rotateY( 60deg) translateZ(288px); }
-.carousel__cell:nth-child(3) { transform: rotateY( 120deg) translateZ(288px); }
-.carousel__cell:nth-child(4) { transform: rotateY(180deg) translateZ(288px); }
-.carousel__cell:nth-child(5) { transform: rotateY(240deg) translateZ(288px); }
-.carousel__cell:nth-child(6) { transform: rotateY(300deg) translateZ(288px); }
+// .carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
+// .carousel__cell:nth-child(2) { transform: rotateY( 60deg) translateZ(288px); }
+// .carousel__cell:nth-child(3) { transform: rotateY( 120deg) translateZ(288px); }
+// .carousel__cell:nth-child(4) { transform: rotateY(180deg) translateZ(288px); }
+// .carousel__cell:nth-child(5) { transform: rotateY(240deg) translateZ(288px); }
+// .carousel__cell:nth-child(6) { transform: rotateY(300deg) translateZ(288px); }
+
+
+.carousel__cell:nth-child(1) { transform: translate3d(0%,0,20px); top: 35px !important; opacity: 1;}
+.carousel__cell:nth-child(2) { transform: translate3d(-125%,0,-150px); top: 20px !important; opacity: 0.85;}
+.carousel__cell:nth-child(3) { transform: translate3d(-215%,0,-280px); top: -40px !important; opacity: 0.75;}
+.carousel__cell:nth-child(4) { transform: translate3d(-160%,0,-295px); top: -115px !important; opacity: 0.65;}
+.carousel__cell:nth-child(5) { transform: translate3d(-57%,0,-430px); top: -180px !important; opacity: 0.55;}
+//.carousel__cell:nth-child(5) { transform: translate3d(125%,0,-150px); top:20px !important;}
+.carousel__cell:nth-child(6) { transform: translate3d(57%,0,-430px); top: -180px !important; opacity: 0.55;}
+.carousel__cell:nth-child(7) { transform: translate3d(160%,0,-295px); top: -115px !important; opacity: 0.65;}
+.carousel__cell:nth-child(8) { transform: translate3d(215%,0,-280px); top: -40px !important; opacity: 0.75;}
+.carousel__cell:nth-child(9) { transform: translate3d(125%,0,-150px); top: 20px !important; opacity: 0.85;}
+
+
 
 
 // .carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
